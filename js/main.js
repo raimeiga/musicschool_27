@@ -31,4 +31,13 @@ $(function () {
      }
    ]
  });
-})
+
+//TOP FAQのアコーディオン
+$('.p-top-faq__answer').hide();
+$('.p-top-faq__item').on('click', function(){
+    $(this).find('.p-top-faq-question__img').toggleClass('u-transform-180');
+    $(this).find('.p-top-faq__answer').slideToggle(400);
+});
+
+
+});

@@ -348,10 +348,213 @@
 }
 
 
-//-----------p-top__------------
+//-----------p-top__flow------------
+
+.p-top__flow {
+ padding-block: 5rem 0;
+ @include sp {
+   padding-block: 4.6rem 0;
+ }
+}
+
+.p-top-flow__diagram {
+ padding-top: 5.3rem;
+ @include sp {
+   padding-top: 3.6rem;
+ }
+}
+
+.p-top-flow-diagram__row {
+ margin-bottom: 5.8rem;
+ display: flex;
+ align-items: center;
+ @include sp {
+   margin-bottom: 3.6rem;
+   flex-wrap: wrap;
+ }
+}
+
+.p-top-flow-diagram-row__marker {
+ background-color: $color-red;
+ width: 2rem;
+ height: 2rem;
+ border-radius: 1rem;
+ margin-inline: 5rem;
+ position: relative;
+ @include sp {
+  margin-inline: 0.7rem 2rem;
+ }
+}
+
+.p-top-flow-diagram-row__marker::before {
+ content: '';
+ background-color: $color-red;
+ width: 0.3rem;
+ height: 12rem;
+ position: absolute;
+ left: 50%;
+ top: 50%;
+ transform: translateX(-50%);
+ @include sp {
+   height: 19rem;
+ }
+}
+
+.p-top-flow-diagram-row__marker--bottom::before {
+ content: '';
+ background-color: $color-red;
+ width: 0.3rem;
+ height: 4.5rem;
+ position: absolute;
+ left: 50%;
+ top: 50%;
+ transform: translateX(-50%);
+ @include sp {
+   height: 13.5rem;
+ }
+}
+
+.p-top-flow-diagram-row__marker--bottom::after {
+ content: '';
+ width: 2.5rem;
+ height: 2.5rem;
+ border: 0.3rem solid $color-red;
+ border-color: transparent transparent $color-red $color-red;
+ position: absolute;
+ left: -0.25rem;
+ top: 2.8rem;
+ transform: rotate(-45deg);
+ @include sp {
+  top: 11.8rem;
+ }
+}
+
+.p-top-flow-diagram-row__head {
+ font-size: 2.2rem;
+ line-height: calc(33 / 22);
+ color: $color-red;
+ width: 19.3rem;
+}
+
+.p-top-flow-diagram-row__text {
+ font-weight: 500;
+ font-size: 1.8rem;
+ line-height: calc(30 / 18);
+ @include sp {
+   font-size: 1.6rem;
+   line-height: calc(30 / 16);
+   padding-top: 0.9rem;
+   margin-left: 4.7rem;
+ }
+}
 
 
-//-----------p-top__------------
+//-----------p-top__faq------------
+
+.p-top__faq {
+ padding-block: 5rem;
+ @include sp {
+   padding-block: 1.9rem;
+ }
+}
+
+.p-top-faq__lists {
+ padding-top: 3.6rem;
+ @include sp {
+   padding-top: 3.9rem;
+ }
+}
+
+.p-top-faq__item {
+ border-bottom: 0.05rem solid #000;
+}
+.p-top-faq__item--top {
+ border-top: 0.05rem solid #000;
+}
+
+.p-top-faq-question {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding-block: 1.5rem;
+ @include sp {
+   padding-block: 1.3rem 1.3rem;
+ }
+}
+
+.p-top-faq__answer {
+ background-color: rgba(203, 0, 0, 0.098);
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding-block: 1.5rem;
+ @include sp {
+  padding-block: 1.3rem 1.3rem;
+}
+}
+
+.p-top-faq-question__cir {
+ padding-top: 0.2rem;
+ background-color: #000;
+ width: 3.5rem;
+ height: 3.5rem;
+ border-radius: 50%;
+ color: #fff;
+ font-size: 2rem;
+ line-height: calc(30 / 20);
+ text-align: center;
+ margin-inline: 2rem 1rem;
+ @include sp {
+  margin-inline: 0rem 2rem;
+ }
+}
+
+.p-top-faq-answer__cir {
+ padding-top: 0.2rem; 
+ background-color: $color-red;
+ width: 3.5rem;
+ height: 3.5rem;
+ border-radius: 50%;
+ color: #fff;
+ font-size: 2rem;
+ line-height: calc(30 / 20);
+ text-align: center;
+ margin-inline: 2rem 1rem;
+ @include sp {
+  margin-inline: 0rem 2rem;
+ }
+}
+
+.p-top-faq-question__te {
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: calc(30 / 17);
+  flex: 1;
+  @include sp {
+    margin-right: 1.5rem;
+  }  
+}
+
+.p-top-faq-answer__te {
+ font-weight: 500;
+ font-size: 1.7rem;
+ line-height: calc(30 / 17);
+ flex: 1;
+ @include sp {
+   margin-right: 4.7rem;
+   font-size: 1.6rem;
+   line-height: calc(30 / 16);
+ }  
+}
+
+.p-top-faq-question__img {
+ width: 1.3rem;
+ margin-right: 2.8rem;
+ @include sp {
+  margin-right: 1.4rem;
+ }
+}
+
 
 
 //-----------p-top__------------
