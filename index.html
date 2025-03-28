@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,17 +14,98 @@
    
    <!-- スタイルシート　-->
    <link rel="stylesheet" href="css/style.css">
+    <!-- google fonts読み込み -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
+  <header class="l-header">
+    <a class="l-header__logo l-header-logo">
+      <div class="l-header-logo__img">
+        <picture>
+          <source media="(max-width: 767px)" srcset="./images/logo-red-sp.svg">
+          <img src="./images/logo-red-pc.svg" alt="">
+        </picture>
+      </div>
+      <h1 class="l-header-logo__text">きたむら<br class="pc"><span>ミュージックスクール</span></h1>
+    </a>
+    <div class="l-header__right">
+      <div class="c-ham sp">
+        <div class="c-ham__inner">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <nav class="l-header__nav">
+        <ul class="l-header__lists">
+          <li class="l-header__list">
+            <a href="">料金</a>
+          </li>
+          <li class="l-header__list">
+            <a href="">ブログ</a>
+          </li>
+          <li class="l-header__list">
+            <a href="">卒業実績</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="" class="c-btn c-btn--header pc">お問い合わせ</a>
+    </div>   
+  </header>
+  <section class="p-top__fv p-top-fv">
+   <div class="p-top-fv__inner">
+    <div class="p-top-fv__img">
+      <picture>
+        <source media="(max-width: 767px)" srcset="./images/fv-sp.jpg">
+        <img src="./images/fv.jpg" alt="">
+      </picture>      
+    </div>
+    <h2 class="p-top-fv__text">「音楽で生きる」<br class="sp">を叶える<br>ミュージックスクール</h2>
+  </section>
+
+  <section class="p-top__concept p-top-concept">
+    <div class="l-inner">
+      <h2 class="p-top-concept__head">全人類、<br class="sp">ミュージシャン計画。</h2>
+      <p class="p-top-concept__text">私たちは音楽を愛するすべての人が、音楽に熱狂できる世界を目指しています。</p>
+      <div class="p-top-concept__img">
+        <picture>
+          <source media="(max-width: 767px)" srcset="./images/semicircle-sp.jpg">
+          <img src="./images/semicircle.jpg" alt="">
+        </picture>
+      </div>
+      <div class="p-top-concept__diagram p-top-concept-diagram">
+        <div class="p-top-concept-diagram__row p-top-concept-diagram-row">
+          <p class="p-top-concept-diagram-row__pri">enthusiasm</p>
+          <span class="p-top-concept-diagram-row__cir p-top-concept-diagram-row__cir--top"></span>
+          <p class="p-top-concept-diagram-row__sec">熱狂し</p>
+        </div>
+        <div class="p-top-concept-diagram__row p-top-concept-diagram-row">
+          <p class="p-top-concept-diagram-row__pri">envision</p>
+          <span class="p-top-concept-diagram-row__cir"></span>
+          <p class="p-top-concept-diagram-row__sec">想像し</p>
+        </div>
+        <div class="p-top-concept-diagram__row p-top-concept-diagram-row">
+          <p class="p-top-concept-diagram-row__pri">effulgent</p>
+          <span class="p-top-concept-diagram-row__cir"></span>
+          <p class="p-top-concept-diagram-row__sec">輝く存在へ</p>
+        </div>
+      </div>
+   
+    </div>
+  </section>
+
 
  
- 
 
- <!--jQueryの読み込み --> 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!--jQueryの読み込み --> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
- <!-- javascriptの読み込み -->
- <script src="./js/main.js"> </script>
+  <!-- javascriptの読み込み -->
+  <script src="./js/main.js"> </script>
 </body>
 </html>

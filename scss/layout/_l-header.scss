@@ -1,2 +1,166 @@
 @use '../foundation/mixin' as *;
 @use '../foundation/variable' as *;
+
+
+.l-header {
+ background-color: yellow;
+ width: 100%;
+ height: 8rem;
+ padding-inline: 10rem;
+ margin: 0 auto;
+ position: fixed;
+ top: 0;
+ left: 0;
+ z-index: 100;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ @include sp {
+   height: 5rem;
+   padding-inline: 2rem 0;
+ }
+}
+
+.l-header__logo {
+ height: inherit;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+
+.l-header-logo__img {
+ width: 3.3rem;
+ @include sp {
+  padding-top: 0.2rem;
+   width: 2rem;
+ }
+}
+
+.l-header-logo__text {
+ padding: 0.4rem 0 0 0.9rem;
+ font-size: 2rem;
+ line-height: calc(23 / 20);
+ @include sp {
+  padding: 0.1rem 0 0 0.7rem;
+   font-size: 1.3rem;
+   line-height: calc(14 / 13);
+ }
+}
+
+.l-header-logo__text span {
+ font-size: 1.5rem;
+ line-height: calc(23 / 15);
+ @include sp { 
+  font-size: 1.3rem;
+  line-height: calc(14 / 14);
+ }
+}
+
+.l-header__right {
+ height: inherit;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+
+.l-header__nav {
+ height: inherit;
+ @include sp {
+   position: fixed;
+   top: 5rem;
+   right: -120%;
+   transition: right .4s;
+ }
+}
+.l-header__nav.active {
+ right: 0;
+}
+
+.l-header__lists {
+ height: inherit;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ column-gap: 3.3rem;
+ @include sp {
+   flex-direction: column;
+ }
+}
+
+.l-header__list {
+ height: inherit;
+ @include sp {
+  height: initial;
+ }
+}
+
+.l-header__list a {
+ background-color: aqua;
+ font-size: 1.7rem;
+ line-height: calc(33 / 17);
+ padding: 2.5rem 0 2.2rem 0;
+ display: block;
+ transition: opacity;
+ position: relative;
+ @include sp {
+  background-color: $color-red;
+  color: #fff;
+  height: 5.8rem;
+  width: 30rem;
+  font-size: 1.8rem;
+  line-height: 1;
+  padding: 2.2rem 0 1.8rem 2rem;
+ }
+}
+
+.l-header__list a:hover {
+ @include pc {
+  opacity: 0.5;
+ }
+ @include sp {
+  background-color: #000;
+ }
+}
+
+.l-header__list a::before {
+ @include pc {
+  content: '';
+  width: 100%;
+  height: 0.2rem;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  bottom: 2.5rem;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .4s;    
+ }
+}
+
+.l-header__list a:hover::before {
+ transform: scaleX(1);
+}
+
+
+.c-btn { 
+ background-color: $color-red;
+ color: #Fff;
+ border: 0.1rem solid transparent;
+ transition: .4s;
+}
+
+.c-btn:hover { 
+ background-color: #Fff;
+ color: $color-red;
+ border: 0.1rem solid $color-red;
+}
+
+.c-btn--header {
+ padding: 0.7rem 3rem 0.5rem;
+ font-size: 1.5rem;
+ line-height: calc(33 / 15);
+ margin-left: 3.3rem;
+}
+
+
+
